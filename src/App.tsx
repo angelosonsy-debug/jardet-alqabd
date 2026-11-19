@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './lib/auth';
 import { CycleProvider } from './lib/cycle';
 import Layout from './components/Layout';
@@ -48,12 +48,12 @@ function AppRoutes() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AuthProvider>
         <CycleProvider>
           <AppRoutes />
         </CycleProvider>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
